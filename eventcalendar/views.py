@@ -20,6 +20,6 @@ class DashboardView(LoginRequiredMixin, View):
             "running_events": running_events,
             "latest_events": latest_events,
             "completed_events": completed_events.count(),
-            "upcoming_events": upcoming_events
+            "upcoming_events": upcoming_events,
         }
         return render(request, self.template_name, context)
